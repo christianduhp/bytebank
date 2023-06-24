@@ -7,6 +7,7 @@
   <title>ByteBank</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -27,64 +28,56 @@
 
   <main class="dados">
     <header class="cabecalho">
-      <h2>Olá, Christian! Estes são os detalhes da sua cotação:</h2>
+      <h2> Olá, Christian! Estes são os detalhes da sua cotação:</h2>
     </header>
 
-    <article class="dadosDolar">
-      <div class="grafico">
-        <div class="grafico__titulo">
-          <span class="grafico__ilustracao-dolar"></span>
-          <h2>Variação da moeda desde o login</h2>
-        </div>
-        <canvas id="graphDolar"></canvas>
+    <article class="graph__article">
+
+      <div class="graph__title">
+        <span class="graph__illustration-dollar"></span>
+        <h2> <i class="fa-solid fa-money-bill-transfer"></i>Variação da moeda desde o login</h2>
       </div>
 
-      <div class="investimentos">
-        <h2>Valores da moeda</h2>
-        <ul class="investimentos__lista" id="dolar" data-list>
+      <div class="combobox">
+        <!-- <h2>Escolha a moeda</h2> -->
+        <div class="combobox__convertFrom">
+          <label for="convertFrom">Converter de</label>
+          <select name="convertFrom" id="convertFrom">
+            <!-- <option value=""></option> -->
+          </select>
+        </div>
+        <div class="combobox__convertTo">
+          <label for="convertTo">Para</label>
+          <select name="convertTo" id="convertTo">
+            <!-- <option value=""></option> -->
+          </select>
+        </div>
+      </div>
+
+      <div class="investments">
+        <!-- <h2>Valores da moeda</h2> -->
+        <ul class="investments__list" id="dollar" data-list>
         </ul>
       </div>
+        
+      <div class="graph">
+
+        <canvas id="currencyGraph"></canvas>
+      </div>
+
+
+
+
     </article>
-
-    <article class="dadosIene">
-      <div class="grafico">
-        <div class="grafico__titulo">
-          <span class="grafico__ilustracao-iene"></span>
-          <h2>Variação da moeda desde o login</h2>
-        </div>
-        <canvas id="graphIene"></canvas>
-      </div>
-
-      <div class="investimentos">
-        <h2>Valores da moeda</h2>
-        <ul class="investimentos__lista" id="iene" data-list>
-        </ul>
-      </div>
-    </article>
-
-    <article class="dadosIene">
-      <div class="grafico">
-        <div class="grafico__titulo">
-          <span class="grafico__ilustracao-dolar"></span>
-          <h2>Variação da moeda desde o login</h2>
-        </div>
-        <canvas id="graphEuro"></canvas>
-      </div>
-
-      <div class="investimentos">
-        <h2>Valores da moeda</h2>
-        <ul class="investimentos__lista" id="euro" data-list>
-        </ul>
-      </div>
-    </article>
-
 
     <footer class="rodape">
       <p>Dashboard - Desenvolvido por Alura</p>
     </footer>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script/script.js" type="module"></script>
+
+
 </body>
 
 </html>

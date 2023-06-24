@@ -1,4 +1,7 @@
-import selectCoin from "./printPrice.js";
+import selectCoin from "./showCurrencyInfo.js";
+import ShowComboBoxes from "./showCmbValues.js";
+
+let workerCurrency = new Worker('./script/workerCurrency.js');
 
 function getTime() {
   let date = new Date();
@@ -6,8 +9,10 @@ function getTime() {
 
   return time
 }
-function addData(graph, label, data) {
+
+function addData(graph, label, data, titleLabel) {
   graph.data.labels.push(label)
+  graph.data.datasets[0].label = titleLabel;
   graph.data.datasets.forEach(dataset => {
     dataset.data.push(data)
   })
@@ -16,13 +21,13 @@ function addData(graph, label, data) {
 
 }
 
-const graphDolar = document.getElementById('graphDolar')
-const graphToDolar = new Chart(graphDolar, {
+const currencyGraph = document.getElementById('currencyGraph')
+const graph = new Chart(currencyGraph, {
   type: 'line',
   data: {
     labels: [],
     datasets: [{
-      label: 'Dólar',
+      label: '' ,
       data: [],
       borderWidth: 1
     }]
@@ -30,68 +35,35 @@ const graphToDolar = new Chart(graphDolar, {
   }
 });
 
-let workerDolar = new Worker('./script/workers/workerDolar.js')
-workerDolar.postMessage('USD')
+function getCurrencyFrom() {
+    const convertFrom = document.getElementById('convertFrom');
+    convertFrom.addEventListener("change", (currencyKey) => {
+        const selectedValue = currencyKey.target.value;   
 
-workerDolar.addEventListener("message", event => {
+        workerCurrency.postMessage({ type: 'CurrencyFrom', value: selectedValue });
+        
+    });
+}
+
+function getCurrencyTo() {
+    const convertTo = document.getElementById('convertTo');
+    convertTo.addEventListener("change", (currencyKey) => {
+        const selectedValue = currencyKey.target.value;
+        workerCurrency.postMessage({ type: 'CurrencyTo', value: selectedValue });
+    });
+}
+
+workerCurrency.addEventListener("message", event => {
   let time = getTime();
   let coinValue = event.data.ask;
-  selectCoin("dolar", coinValue)
-  addData(graphToDolar, time, coinValue)
+  let coinName = event.data.name
+  let titleLabel = selectCoin(coinName, coinValue)
+
+  selectCoin(coinName, coinValue)
+  addData(graph, time, coinValue, titleLabel)
+  
 })
 
-
-const graphIene = document.getElementById('graphIene')
-const graphToIene = new Chart(graphIene, {
-  type: 'line',
-  data: {
-    labels: [],
-    datasets: [{
-      label: 'Iene',
-      data: [],
-      borderWidth: 1
-    }]
-  }
-});
-
-
-let workerIene = new Worker('./script/workers/workerIene.js')
-workerIene.postMessage('JPY')
-
-workerIene.addEventListener("message", event => {
-  let time = getTime();
-  let coinValue = event.data.ask;
-  selectCoin("iene", coinValue)
-  addData(graphToIene, time, coinValue)
-})
-
-
-const graphEuro = document.getElementById('graphEuro')
-const graphToEuro = new Chart(graphEuro, {
-  type: 'line',
-  data: {
-    labels: [],
-    datasets: [{
-      label: 'Euro',
-      data: [],
-      borderWidth: 1
-    }]
-  }
-});
-
-
-let workerEuro = new Worker('./script/workers/workerEuro.js')
-workerEuro.postMessage('Euro')
-
-workerEuro.addEventListener("message", event => {
-  let time = getTime();
-  let coinValue = event.data.ask;
-  selectCoin("euro", coinValue)
-  addData(graphToEuro, time, coinValue)
-})
-
-
-
-// O que fazer para completar o curso:  manter um gráfico só mas com dois 
-// combo-box para o usuario escolher qual moeda quer converter 
-// e usar dom para evitar que seja feito tanto html e workers 
+getCurrencyFrom()
+getCurrencyTo()
+ShowComboBoxes()

@@ -1,0 +1,77 @@
+.graph__article {
+    margin: 3em auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 24px;
+    width: 70%;
+    color: var(--cinza);
+    justify-content: center;
+    align-items: center;
+}
+
+.graph {
+    margin: 1em 0em;
+}
+
+.graph__title,
+.combobox h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.graph__title h2 {
+    color: var(--cinza);
+    font-weight: 700;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.graph__title h2 i {
+    margin-right: 0.5em;
+    color: var(--cinza);
+    font-size: 1.5em;
+}
+
+.investments {
+    color: var(--cinza);
+    font-weight: 600;
+}
+
+.investments li {
+    margin: 0.5em 0;
+    list-style: none;
+}
+
+.combobox{
+    display: flex;
+}
+
+.combobox__convertFrom,
+.combobox__convertTo {
+    display: inline-block;
+    margin: 2em;
+    text-align: center;
+}
+
+.combobox__convertFrom label,
+.combobox__convertTo label {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+
+}
+
+.combobox__convertFrom select,
+.combobox__convertTo select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
