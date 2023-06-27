@@ -1,7 +1,7 @@
-import selectCoin from "./script/showCurrencyInfo.js";
-import ShowComboBoxes from "./script/showCmbValues.js";
+import selectCoin from "../script/showCurrencyInfo.js";
+import ShowComboBoxes from "../script/showCmbValues.js";
 
-let workerCurrency = new Worker('./script/workerCurrency.js');
+let workerCurrency = new Worker('../script/workerCurrency.js');
 
 function getTime() {
   let date = new Date();
