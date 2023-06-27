@@ -1,5 +1,5 @@
-import selectCoin from "../script/showCurrencyInfo.js";
-import ShowComboBoxes from "../script/showCmbValues.js";
+import selectCoin from "./script/showCurrencyInfo.js";
+import ShowComboBoxes from "./script/showCmbValues.js";
 
 let workerCurrency = new Worker('../script/workerCurrency.js');
 

@@ -1,6 +1,6 @@
 function fetchCurrencyCodes() {
     // Fetch the currency codes from the JSON file
-    return fetch('../script/currencyCode.json')
+    return fetch('./script/currencyCode.json')
       .then(response => response.json())
       .then(currencyJson => {
         currencyJson = sortCurrencies(currencyJson);
