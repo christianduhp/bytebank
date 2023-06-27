@@ -18,7 +18,7 @@ function showCurrencyInfo(list, nameFrom, nameTo , value) {
     list.innerHTML =  ''
         let multiplicator = 1;
         const listItem = document.createElement('li')
-        listItem.innerHTML = `${multiplicator} ${nameFrom} = ${(value * multiplicator).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} ${nameTo}` 
+        listItem.innerHTML = `${multiplicator} ${nameFrom} = ${(value * multiplicator).toLocaleString( { style: 'currency', currency: 'BRL' })} ${nameTo}` 
         list.appendChild(listItem)
 }
 

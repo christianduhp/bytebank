@@ -14,6 +14,7 @@
 
 .graph {
     margin: 1em 0em;
+    min-width: 70%;
 }
 
 .graph__title,
