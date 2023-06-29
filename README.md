@@ -75,7 +75,7 @@ The Currency Conversion Project is released under the MIT License.
 | :label: Tecnologias | JavaScript, HTML, CSS
 | :rocket: URL         |<a href="https://christianduhp.github.io/bytebank/">Execute aqui o projeto</a>
 
-![ByteBank](https://github.com/christianduhp/bytebank/assets/85292359/4e78b5df-d2c9-4335-92ca-d8986e950128#vitrinedev)
+![Bytebank](https://github.com/christianduhp/bytebank/assets/85292359/5519dc28-bc0b-422b-8e93-7b37b60ba8df#vitrinedev)
 
 
 
