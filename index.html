@@ -17,25 +17,23 @@
     <img src="./assets/logo.png" alt="Logo do bytebank" />
     <img src="./assets/avatar.png" alt="Avatar do usuário" class="sidebar__avatar" />
     <h2>Christian Oliveira</h2>
-    <hr class="sidebar__linha" />
+    <hr class="sidebar__line" />
     <nav class="sidebar__links">
-      <a href="#"><span class="links__icone dashboard"></span>Dashboard</a>
-      <a href="#"><span class="links__icone cofre">Investimentos</a>
-      <a href="#"><span class="links__icone configuracao">Minha Conta</a>
-      <a href="#"><span class="links__icone duvida">Dúvidas Frequentes</a>
+      <a href="#"><span class="links__icone dashboard"></span><i class="fa-solid fa-house"></i>Dashboard</a>
+      <a href="https://docs.awesomeapi.com.br/api-de-moedas"><span class="links__icone cofre"><i class="fa-solid fa-coins"></i>API de Cotações</a> 
     </nav>
   </aside>
 
   <main class="dados">
-    <header class="cabecalho">
-      <h2> Olá, Christian! Estes são os detalhes da sua cotação:</h2>
+    <header class="header">
+      <h2> Olá! Estes são os detalhes da sua cotação:</h2>
     </header>
 
     <article class="graph__article">
 
       <div class="graph__title">
         <span class="graph__illustration-dollar"></span>
-        <h2> <i class="fa-solid fa-money-bill-transfer"></i>Variação da moeda desde o login</h2>
+        <h2><i class="fa-solid fa-money-bill-transfer"></i>Conversor de Moedas</h2>
       </div>
 
       <div class="combobox">
@@ -54,10 +52,8 @@
         </div>
       </div>
 
-      <div class="investments">
-        <!-- <h2>Valores da moeda</h2> -->
-        <ul class="investments__list" id="dollar" data-list>
-        </ul>
+      <div class="result">
+        <p class="investments__list" id="dolar" data-list> </p>
       </div>
         
       <div class="graph">
@@ -66,8 +62,8 @@
 
     </article>
 
-    <footer class="rodape">
-      <p>Desenvolvido por Christian Oliveira</p>
+    <footer class="footer">
+      <a href="https://github.com/christianduhp/christianduhp">Developed by Christian Oliveira</a>
     </footer>
 
   </main>

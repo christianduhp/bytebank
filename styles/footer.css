@@ -1,5 +1,9 @@
-.rodape {
+.footer {
     padding-bottom: 2em;
     text-align: center;
-    color: var(--roxo);
+}
+
+.footer a{
+    text-decoration: none;
+    color: var(--color-sidebar);
 }

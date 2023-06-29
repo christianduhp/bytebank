@@ -27,6 +27,8 @@ const graph = new Chart(currencyGraph, {
   data: {
     labels: [],
     datasets: [{
+      borderColor: '#065471',
+      backgroundColor: '#065471',
       label: '' ,
       data: [],
       borderWidth: 1

@@ -2,17 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--roxo);
+    justify-content: first baseline;
+    background-color: var(--color-sidebar);
     padding: 5em 0;
-
     filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
 }
 
 .sidebar__avatar {
     width: 150px;
     border-radius: 100%;
-    margin: 1em 0;
-   
+    margin: 2em 0;
 }
 
 .sidebar h2 {
@@ -29,39 +28,31 @@
 
 .sidebar__links a {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.5em;
+    line-height: 2em;
     color: white;
     text-decoration: none;
     margin: 1em 0;
 }
 
-.sidebar__links a:first-of-type {
-    color: var(--verde-escuro);
+.sidebar__links i {
+    margin-right: 0.5em;
 }
 
-.sidebar__linha {
-    margin: 1.5em 0;
+.sidebar__links a:first-of-type {
+    color: var(--color-highlight);
+}
+
+.sidebar__line {
+    margin: 2em 0;
     width: 80%;
 }
 
-.links__icone {
-    padding-left: 2em;
-    background-repeat: no-repeat;
-}
+@media only screen and (max-width: 991px) {
+    .sidebar {
+        display: none;
+        visibility: hidden;
+    }
+    
 
-.dashboard {
-    background-image: url("../assets/icon-dashboard.png")
-}
-
-.cofre {
-    background-image: url("../assets/icon-cofre.png")
-}
-
-.configuracao {
-    background-image: url("../assets/icon-configuracao.png")
-}
-
-.duvida {
-    background-image: url("../assets/icon-duvida.png")
-}
+  }
