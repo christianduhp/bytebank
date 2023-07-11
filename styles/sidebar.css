@@ -14,11 +14,12 @@
     margin: 2em 0;
 }
 
-.sidebar h2 {
+.sidebar h2 a{
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     color: white;
+    text-decoration: none;
 }
 
 .sidebar__links {
@@ -28,7 +29,7 @@
 
 .sidebar__links a {
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 18px;
     line-height: 2em;
     color: white;
     text-decoration: none;

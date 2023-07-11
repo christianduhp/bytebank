@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ByteBank</title>
+  <link rel="icon" type="image/x-icon" href="./assets/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,13 +16,15 @@
 <body class="container">
   <aside class="sidebar">
     <img src="./assets/logo.png" alt="Logo do bytebank" />
-    <img src="./assets/avatar.png" alt="Avatar do usuário" class="sidebar__avatar" />
-    <h2>Christian Oliveira</h2>
-    <hr class="sidebar__line" />
-    <nav class="sidebar__links">
-      <a href="#"><span class="links__icone dashboard"></span><i class="fa-solid fa-house"></i>Dashboard</a>
-      <a href="https://docs.awesomeapi.com.br/api-de-moedas"><span><i class="fa-solid fa-coins"></i>API de Cotações</a> 
-    </nav>
+    <a href="https://github.com/christianduhp/bytebank"><img src="./assets/avatar.png" alt="Avatar do usuário"
+        class="sidebar__avatar" /></a>
+      <h2><a href="https://github.com/christianduhp/bytebank">Christian Oliveira</a></h2>
+      <hr class="sidebar__line" />
+      <nav class="sidebar__links">
+        <a href="#"><span class="links__icone dashboard"></span><i class="fa-solid fa-house"></i>Dashboard</a>
+        <a href="https://docs.awesomeapi.com.br/api-de-moedas"><span><i class="fa-solid fa-coins"></i>API de
+            Cotações</a>
+      </nav>
   </aside>
 
   <main class="dados">
@@ -36,7 +39,7 @@
         <h2><i class="fa-solid fa-money-bill-transfer"></i>Conversor de Moedas</h2>
       </div>
 
-      <div class="combobox">
+      <section class="combobox">
         <!-- <h2>Escolha a moeda</h2> -->
         <div class="combobox__convertFrom">
           <label for="convertFrom">Converter de</label>
@@ -50,12 +53,12 @@
             <!-- <option value=""></option> -->
           </select>
         </div>
-      </div>
+      </section>
 
       <div class="result">
         <p class="investments__list" id="dolar" data-list> </p>
       </div>
-        
+
       <div class="graph">
         <canvas id="currencyGraph"></canvas>
       </div>
