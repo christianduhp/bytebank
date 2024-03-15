@@ -67,4 +67,4 @@ Feel free to contribute to the project by submitting bug reports, feature reques
 ## License
 The Currency Conversion Project is released under the MIT License.
 
-![Bytebank](https://github.com/christianduhp/bytebank/assets/85292359/5519dc28-bc0b-422b-8e93-7b37b60ba8df#vitrinedev)
+![ByteBank](https://github.com/christianduhp/bytebank/assets/85292359/7bc976eb-6ca0-4b07-94e4-ec0b5098a5fa#vitrinedev)
