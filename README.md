@@ -67,12 +67,4 @@ Feel free to contribute to the project by submitting bug reports, feature reques
 ## License
 The Currency Conversion Project is released under the MIT License.
 
-## Vitrine.Dev
-
-| :placard: Vitrine.Dev |<a href="https://cursos.alura.com.br/vitrinedev/christianoliver">Christian Oliveira</a> |
-| -------------  | --- |
-| :sparkles: Nome        | **ByteBank**
-| :label: Tecnologias | JavaScript, HTML, CSS
-| :rocket: URL         |<a href="https://christianduhp.github.io/bytebank/">Execute aqui o projeto</a>
-
 ![Bytebank](https://github.com/christianduhp/bytebank/assets/85292359/5519dc28-bc0b-422b-8e93-7b37b60ba8df#vitrinedev)
