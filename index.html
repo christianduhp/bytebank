@@ -66,12 +66,18 @@
     </article>
 
     <footer class="footer">
-      <a href="https://github.com/christianduhp/christianduhp">Developed by Christian Oliveira</a>
+      <a href="https://github.com/christianduhp/christianduhp">©&nbsp;<span id="currentYear"></span>&nbsp;Developed by Christian Oliveira.</a>
     </footer>
 
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js" type="module"></script>
+
+  <script>
+    var currentYearElement = document.getElementById('currentYear');
+    var currentYear = new Date().getFullYear();
+    currentYearElement.textContent = currentYear;
+</script>
 
 </body>
 

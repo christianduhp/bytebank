@@ -4,19 +4,19 @@
 @import url("./styles/sidebar.css");
 
 :root {
-    --color-bg: #E4E9F6;
-    --color-sidebar: #0C0C14;
-    --color-highlight: #7ca8dd;
-    --color-title: #444444;
+  --color-bg: #E4E9F6;
+  --color-sidebar: #0C0C14;
+  --color-highlight: #7ca8dd;
+  --color-title: #444444;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 29px;
-    
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 29px;
+
 }
 
 .container {
@@ -24,16 +24,15 @@
   min-height: 100vh;
   grid-template-columns: 20% auto;
   background-color: var(--color-bg);
-  overflow-y: auto;
+
 }
 
-@media only screen and (max-width: 991px) {    
-    .container {
-      grid-template-columns: 100%; 
-      overflow-y: auto;
-    }
-    
-    .content {
-      padding: 3em 0em; 
-    }
+@media only screen and (max-width: 991px) {
+  .container {
+    grid-template-columns: 100%;
   }
+
+  .content {
+    padding: 3em 0em;
+  }
+}

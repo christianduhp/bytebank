@@ -14,9 +14,7 @@
     margin: 2em 0;
 }
 
-.sidebar h2 a{
-    font-weight: 600;
-    font-size: 18px;
+.sidebar h2 a {
     line-height: 20px;
     color: white;
     text-decoration: none;
@@ -34,6 +32,10 @@
     color: white;
     text-decoration: none;
     margin: 1em 0;
+    background-color: var(--color-highlight);
+    border-radius: 2em;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .sidebar__links i {
@@ -42,6 +44,8 @@
 
 .sidebar__links a:first-of-type {
     color: var(--color-highlight);
+    background-color: white;
+    font-weight: 600;
 }
 
 .sidebar__line {
@@ -54,6 +58,6 @@
         display: none;
         visibility: hidden;
     }
-    
 
-  }
+
+}
