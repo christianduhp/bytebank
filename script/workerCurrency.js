@@ -12,14 +12,12 @@ async function fetchAPI(sourceCurrency, targetCurrency) {
     const conversionKey = sourceCurrency + targetCurrency;
     postMessage(conversionJson[conversionKey]);
   } else {
-    // Perform the conversion using "USD" 
+    // Perform the conversion using "USD"
     await performConversion("USD");
-
   }
 }
 
 async function performConversion(baseCurrency) {
-    
   // Make an API call to get the conversion rate between the base currency and the source currency
   const sourceConversionResponse = await fetch(
     `https://economia.awesomeapi.com.br/json/last/${baseCurrency}-${sourceCurrency}`
@@ -39,8 +37,11 @@ async function performConversion(baseCurrency) {
   // Check if the obtained conversion rates are valid
   if (sourceConversionRate && targetConversionRate) {
     // Perform the conversion calculation and create an object with the values
-    const conversion = (1 / (sourceConversionRate / targetConversionRate)).toFixed(4);
-    
+    const conversion = (
+      1 /
+      (sourceConversionRate / targetConversionRate)
+    ).toFixed(4);
+
     const sourceCurrencyName = await getCurrencyName(sourceCurrency);
     const targetCurrencyName = await getCurrencyName(targetCurrency);
 
@@ -56,24 +57,24 @@ async function performConversion(baseCurrency) {
 }
 
 function getCurrencyName(key) {
-  return fetch('../script/currencyCode.json')
-    .then(response => response.json())
-    .then(currencyJson => {
+  return fetch("../script/currencyCode.json")
+    .then((response) => response.json())
+    .then((currencyJson) => {
       value = currencyJson[key];
       return value;
     });
 }
 
 self.onmessage = function (event) {
-    if (event.data.type === 'CurrencyFrom') {
-      sourceCurrency = event.data.value;
-    } else if (event.data.type === 'CurrencyTo') {
-      targetCurrency = event.data.value;
-    }
-  
-    fetchAPI(sourceCurrency, targetCurrency);
-    setInterval(() => fetchAPI(sourceCurrency, targetCurrency), 3000);
-  };
+  if (event.data.type === "CurrencyFrom") {
+    sourceCurrency = event.data.value;
+  } else if (event.data.type === "CurrencyTo") {
+    targetCurrency = event.data.value;
+  }
+
+  fetchAPI(sourceCurrency, targetCurrency);
+  setInterval(() => fetchAPI(sourceCurrency, targetCurrency), 3000);
+};
 
 fetchAPI(sourceCurrency, targetCurrency);
 setInterval(() => fetchAPI(sourceCurrency, targetCurrency), 3000);

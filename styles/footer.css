@@ -8,8 +8,7 @@
     font-size: 15px;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     color: var(--color-sidebar);
 }
-

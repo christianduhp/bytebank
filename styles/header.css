@@ -9,6 +9,10 @@
 }
 
 @media only screen and (max-width: 991px) {
+    .header {
+        margin-top: 4em;
+    }
+
     .header h2 {
         font-size: 20px;
     }

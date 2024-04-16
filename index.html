@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -14,20 +14,48 @@
 </head>
 
 <body class="container">
+
   <aside class="sidebar">
-    <img src="./assets/logo.png" alt="Logo do bytebank" />
-    <a href="https://github.com/christianduhp/bytebank"><img src="./assets/avatar.png" alt="Avatar do usuário"
-        class="sidebar__avatar" /></a>
-      <h2><a href="https://github.com/christianduhp/bytebank">Christian Oliveira</a></h2>
-      <hr class="sidebar__line" />
+
+    <div class="logo_container">
+      <img class="logo" src="./assets/logo.png" alt="Logo do bytebank" />
+      <i class="logo_container__arrow fa-solid fa-circle-chevron-down"></i>
+    </div>
+
+
+    <div class="user_container">
+      <a href="https://github.com/christianduhp/bytebank">
+        <img src="./assets/avatar.png" alt="Avatar do usuário" class="sidebar__avatar">
+      </a>
+
+      <h2>
+        Christian Oliveira
+      </h2>
+
+      <hr class="sidebar__line">
+
+
       <nav class="sidebar__links">
-        <a href="#"><span class="links__icone dashboard"></span><i class="fa-solid fa-house"></i>Dashboard</a>
-        <a href="https://docs.awesomeapi.com.br/api-de-moedas"><span><i class="fa-solid fa-coins"></i>API de
-            Cotações</a>
+        <a href="#">
+          <i class="fa-solid fa-house"></i>
+          Dashboard
+        </a>
+
+        <a href="https://github.com/christianduhp/bytebank">
+          <i class="fa-brands fa-github"></i>
+          Detalhes Projeto
+        </a>
+
+        <a href="https://docs.awesomeapi.com.br/api-de-moedas">
+          <i class="fa-solid fa-coins"></i>
+          API de Cotações
+        </a>
       </nav>
+    </div>
+
   </aside>
 
-  <main class="dados">
+  <main>
     <header class="header">
       <h2> Olá! Estes são os detalhes da sua cotação:</h2>
     </header>
@@ -66,10 +94,12 @@
     </article>
 
     <footer class="footer">
-      <a href="https://github.com/christianduhp/christianduhp">©&nbsp;<span id="currentYear"></span>&nbsp;Developed by Christian Oliveira.</a>
+      <a href="https://github.com/christianduhp/christianduhp">©&nbsp;<span id="currentYear"></span>&nbsp;Developed by
+        Christian Oliveira</a>
     </footer>
 
   </main>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js" type="module"></script>
 
@@ -77,7 +107,7 @@
     var currentYearElement = document.getElementById('currentYear');
     var currentYear = new Date().getFullYear();
     currentYearElement.textContent = currentYear;
-</script>
+  </script>
 
 </body>
 
