@@ -58,9 +58,11 @@ workerCurrency.addEventListener("message", (event) => {
   let time = getTime();
   let coinValue = event.data.ask;
   let coinName = event.data.name;
-  let titleLabel = selectCoin(coinName, coinValue);
+  let coinCodeFrom = event.data.code;
+  let coinCodeTo = event.data.codein;
 
-  selectCoin(coinName, coinValue);
+  let titleLabel = selectCoin(coinName, coinValue, coinCodeFrom, coinCodeTo);
+
   addData(graph, time, coinValue, titleLabel);
 });
 
